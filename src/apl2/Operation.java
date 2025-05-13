@@ -1,3 +1,4 @@
+
 //*************************** ATENÇÃO! *****************************
 // As assinaturas dos métodos desta classe não devem ser alteradas!
 //*************************** ATENÇÃO! *****************************
@@ -130,7 +131,23 @@ public class Operation {
 	 */
 	public static float reduce(final DLinkedList data) {
 		// TODO: Implementar o método e remover o lançamento de exceção abaixo.
-		throw new UnsupportedOperationException("Método ainda não implementado.");
+
+		Node current = data.getHead(); // armazena a cabeça no current
+
+		float soma = 0;
+		int cont = 0;
+
+		while (current != null){
+			soma += current.getNota(); // soma as notas
+			cont++;
+			current = current.getNext(); // pula para o próximo nó
+		}
+
+		if (cont == 0){ // caso a lista esteja vazia, evita a divisão por zero
+			return 0;
+		}
+
+		return soma/cont;
 	}
 
 	/**
@@ -145,7 +162,17 @@ public class Operation {
 	 */
 	public static String mapToString(final DLinkedList data) {
 		// TODO: Implementar o método e remover o lançamento de exceção abaixo.
-		throw new UnsupportedOperationException("Método ainda não implementado.");
+
+		StringBuilder sb = new StringBuilder();
+		Node current = data.getHead(); // armazena a cabeça no current
+
+		while (current != null){
+			sb.append(current.getId()).append(";").append(current.getNome()).append(";").append(current.getNota()).append("\n");
+
+			current = current.getNext(); // pula para o próximo nó
+		}
+
+		return sb.toString();
 	}
 
 }
