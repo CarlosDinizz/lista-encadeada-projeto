@@ -132,22 +132,21 @@ public class Operation {
 	public static float reduce(final DLinkedList data) {
 		// TODO: Implementar o método e remover o lançamento de exceção abaixo.
 
-		Node current = data.getHead(); // armazena a cabeça no current
+		Node temp = data.getHead(); // armazena a cabeça no current
 
-		float soma = 0;
-		int cont = 0;
+		float sum = 0;
+		int count = data.getCount();
 
 		while (current != null){
-			soma += current.getNota(); // soma as notas
-			cont++;
-			current = current.getNext(); // pula para o próximo nó
+			sum += temp.getNota(); // soma as notas
+			temp = temp.getNext(); // pula para o próximo nó
 		}
 
-		if (cont == 0){ // caso a lista esteja vazia, evita a divisão por zero
+		if (count == 0){ // caso a lista esteja vazia, evita a divisão por zero
 			return 0;
 		}
 
-		return soma/cont;
+		return sum/count;
 	}
 
 	/**
@@ -164,12 +163,12 @@ public class Operation {
 		// TODO: Implementar o método e remover o lançamento de exceção abaixo.
 
 		StringBuilder sb = new StringBuilder();
-		Node current = data.getHead(); // armazena a cabeça no current
+		Node temp = data.getHead(); // armazena a cabeça no current
 
 		while (current != null){
-			sb.append(current.getId()).append(";").append(current.getNome()).append(";").append(current.getNota()).append("\n");
+			sb.append(temp.getId()).append(";").append(temp.getNome()).append(";").append(temp.getNota()).append("\n");
 
-			current = current.getNext(); // pula para o próximo nó
+			temp = temp.getNext(); // pula para o próximo nó
 		}
 
 		return sb.toString();
