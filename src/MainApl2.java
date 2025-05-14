@@ -87,9 +87,14 @@ public class MainApl2 {
 
 		DLinkedList testList = new DLinkedList();
 		// TODO: Inserir um nó no início da lista testList com os dados ("ABC", "John Doe", 4.7f).
+		testList.insert("ABC", "John Doe", 4.7f);
 		// TODO: Inserir um nó no final da lista testList com os dados ("XYZ", "Jane Doe", 9.9f).
+		testList.append("XYZ", "Jane Doe", 9.9f);
 		// TODO: Inserir um nó no início da lista testList com os dados ("321", "Test", 2.3f).
+		testList.insert("321", "Test", 2.3f);
 		// TODO: Inserir um nó no final da lista testList com os dados ("Nothing", "Yada yada yada", 99.9f).
+		testList.append("Nothing", "Yada yada yada", 99.9f);
+
 		System.out.println(">>>>>>>>>> testList >>>>>>>>>>\n" + testList  + "\n<<<<<<<<<< testList <<<<<<<<<<\n");
 		System.out.println("testList.getHead(): " + testList.getHead());
 		System.out.println("testList.getTail(): " + testList.getTail());
@@ -103,9 +108,14 @@ public class MainApl2 {
 		System.out.println("testList.getHead(): " + testList.getHead());
 		System.out.println("testList.getTail(): " + testList.getTail() + '\n');
 		// TODO: Inserir um nó no início da lista testList com os dados ("qwerty", "QWERTY", 1.2f).
+		testList.insert("qwerty", "QWERTY", 1.2f);
 		// TODO: Inserir um nó no final da lista testList com os dados ("WASD", "wasd", 3.4f).
+		testList.append("WASD", "wasd", 3.4f);
 		// TODO: Inserir um nó no início da lista testList com os dados ("ijkl", "IJKL", 5.6f).
+		testList.insert("ijkl", "IJKL", 5.6f);
 		// TODO: Inserir um nó no final da lista testList com os dados ("1234", "Um Dois Tres Quatro", 7.8f).
+		testList.append("1234", "Um Dois Tres Quatro", 7.8f);
+
 		System.out.println(">>>>>>>>>> testList >>>>>>>>>>\n" + testList  + "\n<<<<<<<<<< testList <<<<<<<<<<\n");
 		testList.clear();
 		System.out.println(">>>>>>>>>> testList.clear() >>>>>>>>>>\n" + testList  + "\n<<<<<<<<<< testList.clear() <<<<<<<<<<\n");

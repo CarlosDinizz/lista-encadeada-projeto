@@ -137,7 +137,7 @@ public class Operation {
 		float sum = 0;
 		int count = data.count();
 
-		while (current != null){
+		while (temp != null){
 			sum += temp.getNota(); // soma as notas
 			temp = temp.getNext(); // pula para o próximo nó
 		}
@@ -165,7 +165,7 @@ public class Operation {
 		StringBuilder sb = new StringBuilder();
 		Node temp = data.getHead(); // armazena a cabeça no current
 
-		while (current != null){
+		while (temp != null){
 			sb.append(temp.getId()).append(";").append(temp.getNome()).append(";").append(temp.getNota()).append("\n");
 
 			temp = temp.getNext(); // pula para o próximo nó
