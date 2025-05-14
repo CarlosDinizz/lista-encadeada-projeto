@@ -135,7 +135,7 @@ public class Operation {
 		Node temp = data.getHead(); // armazena a cabeça no current
 
 		float sum = 0;
-		int count = data.getCount();
+		int count = data.count();
 
 		while (current != null){
 			sum += temp.getNota(); // soma as notas
