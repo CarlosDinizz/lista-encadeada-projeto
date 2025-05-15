@@ -25,7 +25,7 @@ public class Operation {
 		NodeOriginal nodeOriginal = original.getHead();
 
 		while (nodeOriginal != null){
-			String newId = String.valueOf(nodeOriginal.getId());
+			String newId = "23.S1-" + String.valueOf(nodeOriginal.getId());
 			String nome = nodeOriginal.getNome();
 			Float nota = 99.9f;
 

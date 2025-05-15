@@ -38,7 +38,7 @@ public class DLinkedList {
 		newHead.setNota(nota);
 
 		//se a lista não estiver vazia, atualiza coloca o antigo head na posicao seguinte
-		if (getHead() != null || !isEmpty()){
+		if (getHead() != null && !isEmpty()){
 			//coloca o novo head como o anterior do antigo
 			getHead().setPrevious(newHead);
 
@@ -157,8 +157,9 @@ public class DLinkedList {
 			head = null;
 			tail = null;
 		}
-		Node nodePrevious = node.getPrevious();
-		if (countTemp < count){
+
+		else if (countTemp < count){
+			Node nodePrevious = node.getPrevious();
 			Node nodeNext = node.getNext();
 
 			nodeNext.setPrevious(nodePrevious);
@@ -166,6 +167,7 @@ public class DLinkedList {
 			tail = nodeNext;
 		}
 		else {
+			Node nodePrevious = node.getPrevious();
 			nodePrevious.setNext(null);
 			tail = nodePrevious;
 		}

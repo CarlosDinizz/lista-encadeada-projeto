@@ -33,7 +33,7 @@ public class Node {
     }
 
     public Node(String id, String nome, Float nota, Node previous, Node next) {
-        this.id = "23.S1-" + id;
+        this.id = id;
         this.nome = nome;
         this.nota = nota;
         this.previous = previous;
@@ -45,7 +45,7 @@ public class Node {
     }
 
     public void setId(String id) {
-        this.id = "23.S1-" + id;
+        this.id = id;
     }
 
     public String getNome() {
