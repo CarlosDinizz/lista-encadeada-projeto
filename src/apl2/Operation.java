@@ -111,7 +111,7 @@ public class Operation {
 		Node theHead = data.getHead();
 
 		while(theHead != null){
-			if (theHead.getNota() < average){
+			if (theHead.getNota() > average){
 				dataFiltered.append(theHead.getId(), theHead.getNome(), theHead.getNota());
 			}
 			theHead = theHead.getNext();

@@ -95,12 +95,15 @@ public class DLinkedList {
 			tail = null;
 
 			return theHead;
+		} else {
+			Node newHead = head.getNext();
+
+			newHead.setPrevious(null);
+			head = newHead;
 		}
 
-		Node newHead = head.getNext();
-
-		newHead.setPrevious(null);
-		head = newHead;
+		theHead.setNext(null);
+		theHead.setPrevious(null);
 
 		return theHead;
 	}
@@ -135,6 +138,9 @@ public class DLinkedList {
 		}
 		count--;
 
+		nodeToRemove.setPrevious(null);
+    	nodeToRemove.setNext(null);
+
 		return nodeToRemove;
 	}
 
@@ -147,30 +153,44 @@ public class DLinkedList {
 		if (isEmpty()){
 			return null;
 		}
+
 		Node node = head;
+
 		int countTemp = 0;
-		while(!node.getId().equals(id) && countTemp < count){
+		while(node != null && !node.getId().equals(id) && countTemp < count){
 			node = node.getNext();
 			countTemp++;
 		}
-		if (countTemp == 0){
+
+		if (node == null) {
+        	return null;
+    	}
+
+		if (head == tail && node == head){
 			head = null;
 			tail = null;
 		}
 
-		else if (countTemp < count){
+    	else if (node == head) {
+        	head = node.getNext();
+        	head.setPrevious(null);
+    	}
+
+		else if (node == tail) {
+        	tail = node.getPrevious();
+        	tail.setNext(null);
+		}
+
+		else {
 			Node nodePrevious = node.getPrevious();
 			Node nodeNext = node.getNext();
 
 			nodeNext.setPrevious(nodePrevious);
 			nodePrevious.setNext(nodeNext);
-			tail = nodeNext;
 		}
-		else {
-			Node nodePrevious = node.getPrevious();
-			nodePrevious.setNext(null);
-			tail = nodePrevious;
-		}
+
+		node.setNext(null);
+    	node.setPrevious(null);
 
 		count--;
 		return node;

@@ -71,7 +71,12 @@ public class MainApl2 {
 		
 		
 		// TODO: Salvar o conteúdo da String contents em um arquivo chamado "dados.csv".
-
+		try {
+			Data.saveStringToTextFile("dados.csv", contents);
+		} catch (IOException e) {
+ 			System.err.println("Erro ao gravar arquivo!");
+ 			e.printStackTrace();
+		}
 		
 		Node test1 = fixedList.getNode("23.S1-999");
 		System.out.println(">>>>>>>>>> test1 >>>>>>>>>>\n" + test1 + "\n<<<<<<<<<< test1 <<<<<<<<<<\n");
