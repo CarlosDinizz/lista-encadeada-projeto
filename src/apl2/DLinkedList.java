@@ -1,6 +1,9 @@
 // arquivo: src/apl2/DLinkedList.java
 
 // TODO: Colocar a identificação dos(as) integrantes aqui.
+//Arthur Roldan Slikta 							RA: 10353847
+//Carlos Eduardo Diniz de Almeida 				RA: 10444407
+//Guilherme Clauz Morlina da Silva 				RA: 10436477
 
 package apl2;
 

@@ -5,9 +5,11 @@
 // arquivo: src/apl2/Operation.java
 
 // TODO: Colocar a identificação dos(as) integrantes aqui.
+//Arthur Roldan Slikta 							RA: 10353847
+//Carlos Eduardo Diniz de Almeida 				RA: 10444407
+//Guilherme Clauz Morlina da Silva 				RA: 10436477
 
 package apl2;
-
 
 public class Operation {
 
@@ -130,7 +132,6 @@ public class Operation {
 	 * @return Média das notas ({@code float}) contidas na coleção de dados ({@code data}).
 	 */
 	public static float reduce(final DLinkedList data) {
-		// TODO: Implementar o método e remover o lançamento de exceção abaixo.
 
 		Node temp = data.getHead(); // armazena a cabeça no current
 
@@ -160,10 +161,9 @@ public class Operation {
 	 * @return {@code String} com a coleção de dados separada por ponto-e-vírgula (dados de cada pessoa) e quebras de linha (cada pessoa).
 	 */
 	public static String mapToString(final DLinkedList data) {
-		// TODO: Implementar o método e remover o lançamento de exceção abaixo.
 
 		StringBuilder sb = new StringBuilder();
-		Node temp = data.getHead(); // armazena a cabeça no current
+		Node temp = data.getHead(); // armazena head em temp
 
 		while (temp != null){
 			sb.append(temp.getId()).append(";").append(temp.getNome()).append(";").append(temp.getNota()).append("\n");
@@ -173,5 +173,4 @@ public class Operation {
 
 		return sb.toString();
 	}
-
 }
